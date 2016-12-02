@@ -1,0 +1,42 @@
+@mixin c-border-radius($top-right,$bottom-right,$bottom-left,$top-left){
+  -webkit-border-top-right-radius: $top-right;
+  -webkit-border-bottom-right-radius: $bottom-right;
+  -webkit-border-bottom-left-radius: $bottom-left;
+  -webkit-border-top-left-radius: $top-left;
+
+  -moz-border-radius-topright: $top-right;
+  -moz-border-radius-bottomright: $bottom-right;
+  -moz-border-radius-bottomleft: $bottom-left;
+  -moz-border-radius-topleft: $top-left;
+
+  border-top-right-radius: $top-right;
+  border-bottom-right-radius: $bottom-right;
+  border-bottom-left-radius: $bottom-left;
+  border-top-left-radius: $top-left;
+}
+@mixin c-box-shadow-none{
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+@mixin c-box-shadow-inner($cv,$ch,$cblur,$cspread,$ccolor){
+  box-shadow: inset $cv $ch $cblur $cspread $ccolor;
+  -webkit-box-shadow: inset $cv $ch $cblur $cspread $ccolor;
+  -moz-box-shadow: inset $cv $ch $cblur $cspread $ccolor;
+}
+@mixin c-box-shadow-outer($cv,$ch,$cblur,$cspread,$ccolor){
+  box-shadow:  $cv $ch $cblur $cspread $ccolor;
+  -webkit-box-shadow:  $cv $ch $cblur $cspread $ccolor;
+  -moz-box-shadow:  $cv $ch $cblur $cspread $ccolor;
+}
+@mixin c-transition($properties, $delay, $function, $duration){
+  transition: $properties $delay $function $duration;
+  -webkit-transition: $properties $delay $function $duration;
+  -moz-transition: $properties $delay $function $duration;
+}
+
+@mixin c-transform-translateX($quantity ){
+  -webkit-transform: translateX($quantity);
+  -moz-transform: translateX($quantity);
+  transform: translateX($quantity);
+}
